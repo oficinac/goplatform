@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctmeutjs54kbj"]
+
+[ext_resource type="Texture2D" uid="uid://o08nxfjd37s3" path="res://World/Background/controles.png" id="1_j71u7"]
+[ext_resource type="Script" path="res://instrucoes.gd" id="1_xuyh2"]
+
+[node name="instrucoes" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xuyh2")
+
+[node name="controles" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 359.0
+offset_bottom = 237.0
+texture = ExtResource("1_j71u7")
+expand_mode = 1
+
+[node name="btn_voltar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 133.0
+offset_right = 246.0
+offset_bottom = 164.0
+text = "VOLTAR"
+
+[connection signal="pressed" from="btn_voltar" to="." method="_on_btn_voltar_pressed"]
